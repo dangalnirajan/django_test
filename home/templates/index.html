@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block start %}
+
+<a href="/contact/">
+    Contact
+</a>
+<br/>
+<a href="/about/">
+    About
+</a>
+    <br/>
+    <a href="/recipes/">
+    Recipes
+</a>
+<h1>Hello worlds !!!</h1>
+
+
+<table class="container">
+  <tr>
+    <th>SN</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+    {% for name in names %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ name.name }}</td>
+    <td>{{ name.age }}</td>
+  </tr>
+    {% endfor %}
+</table>
+{% endblock %}
